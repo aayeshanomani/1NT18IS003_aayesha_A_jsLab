@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <link rel="text" href="index.js">
+        <style>
+            .container {
+              position: relative;
+              width: 50%;
+            }
+            
+            .image {
+              display: block;
+              width: 100%;
+              height: auto;
+            }
+            
+            .overlay {
+              position: absolute;
+              bottom: 100%;
+              left: 0;
+              right: 0;
+              background-color: #394053;
+              overflow: hidden;
+              width: 100%;
+              height: 0;
+              transition: .5s ease;
+            }
+            
+            .container:hover .overlay {
+              bottom: 0;
+              height: 100%;
+            }
+            
+            .text {
+              white-space: nowrap; 
+              color: #CEE0DC;
+              font-size: 20px;
+              position: absolute;
+              overflow: hidden;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              -ms-transform: translate(-50%, -50%);
+            }
+        </style>
+    </head>
+    <body style="background-color: #16697A; color: #489FB5;">
+        <div class="container center">
+            <img src="onepiece2.jpg" alt="Avatar" class="image">
+            <div class="overlay">
+                <div class="text">This is the Mugiwara Kaizoku</div>
+            </div>
+        </div>
+        <br>
+        <h1 class="center" style="background-color: #82C0CC; color: #EDE7E3;">this page is for one piece fans</h1>
+        <h2 class="center">here we will one piece stuff</h2>
+        <audio class="center" controls><Source src="one_piece_nami.mp3"></audio>
+        <br>
+        <br>
+        <div id="styled_video_container">
+            <video src="Top 10 Strongest One Piece Characters.mp4" class="center" style="width: 400px;" type="video/mp4" controls poster="remote.jpeg" id="styled_video" muted preload="metadata" loop>
+        </div>
+        <button type="button" id="style_it">Style It!</button>
+        <button type="button" id="stop_style_it">Stop It!</button>
+        <br><br>
+        <a href="page3.html">Move to form</a>
+    </body>
+</html>

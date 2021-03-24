@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <style>
+            .textinput{
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0px;
+                box-sizing: border-box;
+                border: 3px solid #FF99C9;
+                -webkit-transition: 0.5s;
+                transition: 0.5s;
+                outline: none;
+            }
+
+            .textinput:focus {
+                border: 3px solid #C1BDDB;
+            }
+
+        </style>
+    </head>
+    <body >
+        <a href="page2.html" class="center">Move to styled page</a>
+        <form class="center">
+            <input class="textinput" type="text" placeholder="First Name"><br>
+            <input class="textinput" type="text" placeholder="Last Name"><br>
+            <input type="email" class="textinput" placeholder="Email"><br>
+            <input type="number" placeholder="Age" class="textinput"><br><br>
+            Gender:
+            <label class="container">Male
+                <input type="radio" checked="checked" name="radio">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">Female
+                <input type="radio" checked="checked" name="radio">
+                <span class="checkmark"></span>
+            </label>
+            <br><br>
+            <label for="subjects">Choose a subject:</label>
+            <div class="customSelect">
+                <select name="subjects">
+                    <option value="biology">Biology</option>
+                    <option value="science">Science</option>
+                    <option value="commerce">Commerce</option>
+                </select>
+            </div>
+            <br><br>
+            <label for="img">Select image:</label>
+            <input type="file" id="img" name="img", accept="image/*">
+            <br>
+            <br>
+            <input class="button button1" type="submit" value="SUBMIT"/>
+            <input class="button button2" type="reset" value="RESET"/>
+                <br>
+        </form>
+    </body>
+</html>
