@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="index2.css">
+        <style>
+            .textinput{
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0px;
+                box-sizing: border-box;
+                border: 3px solid #FF99C9;
+                -webkit-transition: 0.5s;
+                transition: 0.5s;
+                outline: none;
+            }
+
+            .textinput:focus {
+                border: 3px solid #C1BDDB;
+            }
+
+        </style>
+    </head>
+    <body id="back">
+        <a href="page2.html" class="center">Move to styled page</a>
+        <div class="center">
+            <h4>Welcome to the game.</h4>
+            <h4>Our browser has guessed a number between 1 and 100 inclusive and you'll get 10 attempts to guess it.</h4>
+            <h4>Enter the number you guess and the browser will inform you whether it's smaller, larger or equal to the number it has guessed.</h4>
+        </div>
+        
+        <div class="boxModl center">
+            
+                <input id="guess" class="textinput" type="text" placeholder="Enter your guessed number">
+                <br>
+                <br>
+                <p id="sugg">All the best</p>
+                <div id="check">
+                    <button class="button button1" style="color: #C5D5EA;" onclick="checkNum()">Check the number</button>
+                </div>
+        </div>
+        <script>
+            function getRandomInt(max) {
+                return Math.floor(Math.random() * max);
+            }
+            var num, count = 1;
+            num = getRandomInt(100)
+            function checkNum()
+            {
+                var para = document.getElementById("sugg");
+                var guessed = document.getElementById("guess").value;
+                var butt = document.getElementById("check");
+                var back = document.getElementById("back");
+                if(guessed == num)
+                {
+                    para.innerHTML="Congratulations, the number you've guessed is correct."
+                    butt.innerHTML="";
+                    back.style.backgroundColor="green";
+                }
+                else if(guessed<num)
+                {
+                    para.innerHTML="Aww, wrong guess. My number is greater than that."
+                    count++;
+                    back.style.backgroundColor="red"
+                }
+                else
+                {
+                    para.innerHTML="Aww, wrong guess. My number is smaller than that."
+                    count++;
+                    back.style.backgroundColor="red";
+                }
+                if(count==10)
+                {
+                    alert("Your attempts are over. The number was "+num+".");
+                    butt.innerHTML="";
+                    back.style.backgroundColor="yellow"
+                }
+            }
+        </script>
+    </body>
+</html>

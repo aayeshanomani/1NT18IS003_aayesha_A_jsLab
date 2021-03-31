@@ -1,0 +1,74 @@
+.p1{
+    background-color: #C5AFA4;
+}
+
+.c1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-stretch: extra-condensed;
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 0.8;
+}
+
+.c2{
+    font-size-adjust: 0.5;
+    font-stretch: condensed;
+    font-style: italic;
+    font-weight: lighter;
+    direction: rtl;
+    text-transform: lowercase;
+    line-height: 1.8;
+}
+
+.c3{
+    font-stretch: ultra-condensed;
+    font-style: oblique;
+    font-weight: bold;
+    text-decoration: overline;
+    text-transform: capitalize;
+    word-spacing: 10px;
+}
+
+.c4{
+    font-stretch: semi-condensed;
+    font-variant: normal;
+    font-weight: 900;
+    text-decoration: line-through;
+    text-indent: 50px;
+}
+
+.c5{
+    font-stretch: ultra-expanded;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-variant: small-caps;
+    color: #E2FCEF;
+    text-decoration: underline;
+    letter-spacing: 3px;
+}
+
+.c6{
+    word-spacing: -5px;
+}
+
+.listclass{
+    list-style-image: url(listicon.jpg);
+    list-style-position: inside;
+    list-style-type: circle;
+}
+
+.listclass li::before{
+    width: 10px;
+    height: 10px;
+}
+
+.boxModl{
+    background-color: #76818E;
+    padding: 7pt 25% auto 10em;
+    border-style: dotted double;
+    border-width: 5px 6px;
+    margin: 7pt 25% auto 10em;
+    width: 50%;
+}
+
