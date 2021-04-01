@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="index2.css">
+        <style>
+            .textinput{
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0px;
+                box-sizing: border-box;
+                border: 3px solid #FF99C9;
+                -webkit-transition: 0.5s;
+                transition: 0.5s;
+                outline: none;
+            }
+
+            .textinput:focus {
+                border: 3px solid #C1BDDB;
+            }
+
+        </style>
+    </head>
+    <body id="back" style="background-color: #B10F2E;">
+        <a href="page2.html" class="center">Move to styled page</a>
+        <div class="center">
+            <h4 style="color: #ffffff;">Add a number to array.</h4>
+        </div>
+        
+        <div class="boxModl center">
+            
+                <input id="guess" class="textinput" type="text" placeholder="Enter your guessed number">
+                <br>
+                <br>
+                
+                <div id="check">
+                    <button class="button button1" style="color: #C5D5EA;" onclick="addNum()">Add the number</button>
+                </div>
+        </div>
+        <div id="showArray" class="boxModl">
+
+        </div>
+        <script>
+            let a = new Array();
+            function addNum()
+            {
+                var para = document.getElementById("showArray");
+                var guessed = document.getElementById("guess").value;
+                var butt = document.getElementById("check");
+                var back = document.getElementById("back");
+
+                a.push(guessed);
+
+                para.innerHTML = "<h4>The array is "+a+"</h4>";
+                back.style.color = "#221D23"
+                para.style.color = "#D1603D"
+                para.style.backgroundColor = "#D0E37F"
+            }
+        </script>
+    </body>
+</html>
