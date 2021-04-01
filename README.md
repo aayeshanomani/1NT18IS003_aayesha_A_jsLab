@@ -1,2 +1,2 @@
-# 1nt18is003-web-lab
+# 1NT18IS003_aayesha_A_jsLab
 Lab work from class.
