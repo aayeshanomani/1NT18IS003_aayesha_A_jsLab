@@ -170,3 +170,56 @@ audio{
   transform: rotate(300deg);
   box-shadow:         12px 9px 13px rgba(255, 0, 255, 0.75);
 }
+
+.textinput{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0px;
+  box-sizing: border-box;
+  border: 3px solid #FF99C9;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+.textinput:focus {
+  border: 3px solid #C1BDDB;
+}
+.element {
+  height: 150px;
+  width: 150px;
+  float: right;
+  margin-right: 280px;
+  margin-top: 48px;
+  background-color: #EE6055;
+  animation-name: stretch;
+  animation-duration: 1.5s; 
+  animation-timing-function: ease-out; 
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  border-style: dotted double;
+  border-width: 5px 6px;
+}
+
+@keyframes stretch {
+  0% {
+      transform: scale(.3);
+      background-color: #508CA4;
+      border-radius: 100%;
+  }
+  50% {
+      background-color: #BFD7EA;
+  }
+  100% {
+      transform: scale(1.5);
+      background-color: #91AEC1;
+  }
+}
+
+#attempts{
+  padding: 20% 30%;
+  color: #004F2D;
+}
