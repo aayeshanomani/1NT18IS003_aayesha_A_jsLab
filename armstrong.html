@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="index2.css">
+        <style>
+            .textinput{
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0px;
+                box-sizing: border-box;
+                border: 3px solid #333232;
+                -webkit-transition: 0.5s;
+                transition: 0.5s;
+                outline: none;
+            }
+
+            .textinput:focus {
+                border: 3px solid #F7B2AD;
+            }
+
+        </style>
+    </head>
+    <body id="back" style="background-color: #CEB7B3;">
+        <a href="page2.html" class="center">Move to styled page</a>
+        <div class="center">
+            <h4 style="color: #ffffff;">Check armstrong number</h4>
+        </div>
+        
+        <div class="boxModl center">
+            
+                <input id="guess" class="textinput" type="text" placeholder="Enter the number">
+                <br>
+                <br>
+                
+                <div id="check">
+                    <button class="button button1" style="color: #B7B7B7;" onclick="addNum()">Check</button>
+                </div>
+        </div>
+        <div id="showArray" class="boxModl">
+
+        </div>
+        <script>
+            let a = new Array();
+            function addNum()
+            {
+                var para = document.getElementById("showArray");
+                var guessed = document.getElementById("guess").value;
+                var butt = document.getElementById("check");
+                var back = document.getElementById("back");
+
+                let temp = guessed;
+                let sum=0;
+                while (temp > 0) {
+                
+                    let remainder = temp % 10;
+
+                    sum += remainder * remainder * remainder;
+
+                    
+                    temp = parseInt(temp / 10);
+                }
+                
+                if (sum == guessed) {
+                    para.innerHTML = "<h4>The number "+guessed+" is an Armstrong number</h4>";
+                }
+                else {
+                    para.innerHTML = "<h4>The number "+guessed+" is not an Armstrong number</h4>"
+                }                
+
+                back.style.color = "#9ABCA7"
+                para.style.color = "#57E2E5"
+                para.style.backgroundColor = "#153131"
+            }
+        </script>
+    </body>
+</html>
