@@ -1,0 +1,61 @@
+.dog{
+    background-color: pink;
+    width: 40vw;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+
+}
+img{
+    width: 35vw;
+}
+
+
+button{
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+    margin-top: 10px;
+    border: none;
+    animation: blink 2s infinite;
+}
+
+@keyframes blink {
+0% {
+background-color: #d90368
+}
+25% {
+background-color: #ff4e00;
+}
+50% {
+background-color: #000;
+}
+75% {
+background-color: #d90368;
+}
+100% {
+background-color: #058c42;
+}
+}
+
+.moreInfo{
+    display: none;
+}
+
+@media only screen and (max-width: 800px) {
+    .dog{
+    background-color: pink;
+    width: 80vw;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+
+}
+img{
+    width: 70vw;
+}
+}
