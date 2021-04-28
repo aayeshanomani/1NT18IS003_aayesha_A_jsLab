@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="boxArea.css">
+    <link rel="stylesheet" href="index.css">
+    <title>Boxes</title>
+</head>
+<body>
+    <div id="box1" class="center">
+        <div id="box2" class="center">
+            <div id="box3" class="center">
+                <div id="box4" class="center">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let b1 = document.getElementById("box1")
+        let b2 = document.getElementById("box2")
+        let b3 = document.getElementById("box3")
+        let b4 = document.getElementById("box4")
+
+        b1.addEventListener("mouseenter", ()=>{
+            console.log("Entered area 1, changing color")
+            b1.style.backgroundColor = "#EBD4CB"
+        })
+
+        b1.addEventListener("mouseleave", ()=>{
+            console.log("Left area 1, changing color")
+            b1.style.backgroundColor = "#DA9F93"
+        })
+
+        b2.addEventListener("mouseenter", ()=>{
+            console.log("Entered area 2, changing color")
+            b2.style.backgroundColor = "#B6465F"
+        })
+
+        b2.addEventListener("mouseleave", ()=>{
+            console.log("Left area 2, changing color")
+            b2.style.backgroundColor = "#890620"
+        })
+
+        b3.addEventListener("mouseenter", ()=>{
+            console.log("Entered area 3, changing color")
+            b3.style.backgroundColor = "#2C0703"
+        })
+
+        b3.addEventListener("mouseleave", ()=>{
+            console.log("Left area 3, changing color")
+            b3.style.backgroundColor = "#AA8F66"
+        })
+
+        b4.addEventListener("mouseenter", ()=>{
+            console.log("Entered last area, changing color")
+            b4.style.backgroundColor = "#ED9B40"
+            document.body.style.backgroundColor = "#61C9A8"
+        })
+
+        b4.addEventListener("mouseleave", ()=>{
+            console.log("Left area 4, changing color")
+            b4.style.backgroundColor = "#BA3B46"
+            document.body.style.backgroundColor = "#9AADBF"
+        })
+    </script>
+</body>
+</html>
