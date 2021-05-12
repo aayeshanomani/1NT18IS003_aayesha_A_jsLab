@@ -95,12 +95,14 @@ function fun3(){
        
     </script>
 
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="index2.css">
 
     <style>
         body{
             background-color: #437C90;
+            background-image: url('solar.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
         }
         
         select{
@@ -109,16 +111,65 @@ function fun3(){
             border-radius: 29px;
             border: 2px dotted #A98743;
         }
+        .button:hover{
+            border: 2px ridge #041B15;
+            border-radius: 8px;
+            background-color: #22AAA1;
+        }
+        .button {
+            background-color: #989FCE;
+            border: none;
+            color: #347FC4;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        h1{
+            color: wheat;
+        }
+
+        .button1 {
+            background-color: #966B9D; 
+            color: #C98686; 
+            border: 2px solid hsl(29, 81%, 73%);
+            border-radius: 28px;
+            margin-left: 25%;
+        }
         select:hover{
             background-color: #F7C548;
             height: 29px;
-            border-radius: 29px;
-            border: 2px dotted blue;
+            border-radius: 8px;
+            border: 2px dotted #136F63;
         }
         .boxModl{
-            margin-left: 28%;
+            margin-left: 23%;
             visibility: hidden;
-            padding: 38px
+            padding: 38px;
+            background-color: #A0DDFF;
+            border-style: dotted double;
+            border-width: 5px 6px;
+            width: 50%;
+            border-color: #758ECD;
+            border-radius: 38px;
+        }
+
+        .boxModl:hover{
+            background-color: #C1CEFE;
+            border-style: none dashed;
+            border-width: 8px;
+            border-color: #7189FF;
+            border-radius: 83px;
+        }
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
         }
 
     </style>
@@ -144,7 +195,7 @@ function fun3(){
 
     <button class="center button button1" style="color: #C5D5EA;"onclick="display()">Show Details</button>
     
-    
+    <br><br>
     <div id="showArray" class="boxModl">
         <br><br>
         <p id="dsp"></p>
