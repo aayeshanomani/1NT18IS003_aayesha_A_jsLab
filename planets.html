@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System</title>
+    <script>
+        function planet(name, distance, pdOfRev, pdOfRot, mass){
+            this.name = name;
+            this.distance = distance;
+            this.pdOfRev = pdOfRev;
+            
+
+            this.display = function(){
+                document.getElementById("dsp").innerHTML =  `Planet name is ${this.name} \n it's distance from sun is ${this.distance} million kms`
+                document.getElementById("pdOfRev").innerHTML = `Period of revolution = ${this.pdOfRev}`
+               
+            }
+        }
+
+        function display()
+        {
+            let slect = document.getElementById("planet").value;
+            let para = document.getElementById("showArray");
+            para.style.visibility = "visible"
+            if(slect == "Mercury")
+                fun1();
+                if(slect == "Venus")
+                fun2();
+                if(slect == "Earth")
+                fun3();
+                if(slect == "Mars")
+                fun4();
+                if(slect == "Jupiter")
+                fun5();
+                if(slect == "Saturn")
+                fun6();
+                if(slect == "Uranus")
+                fun8();
+                if(slect == "Neptune")
+                fun7();
+        }
+
+        function fun1(){
+            let nwPlanet = new planet("Mercury", "52.816", "87.96 Earth days")
+            nwPlanet.display()
+            document.getElementById("disp1").innerHTML = ""
+        }
+       
+        function fun2(){
+            let nwPlanet2 = new planet("Venus", "107.78", "224.68 Earth days")
+            nwPlanet2.display()
+            document.getElementById("disp1").innerHTML = ""
+        }
+        
+function fun3(){
+            let nwPlanet2 = new planet("Earth", "151.06", "365.26 days")
+            nwPlanet2.display()
+            document.getElementById("disp1").innerHTML = ""
+        }
+
+        function fun4(){
+            let nwPlanet2 = new planet("Mars", "247.72", "686.98 Earth days")
+            nwPlanet2.display()
+            document.getElementById("disp1").innerHTML = ""
+        }
+       
+
+        function fun5(){
+            let nwPlanet2 = new planet("Jupiter", "756.52", "11.862 Earth years")
+            nwPlanet2.display()
+            document.getElementById("disp1").innerHTML = ""
+        }
+        
+        function fun6(){
+            let nwPlanet2 = new planet("Saturn", "1427.0", "29.456 Earth years")
+            nwPlanet2.display()
+            document.getElementById("disp1").innerHTML = ""
+        }
+        
+        function fun7(){
+            let nwPlanet2 = new planet("Neptune", "2871.0", "164.81 Earth years")
+            nwPlanet2.display()
+            document.getElementById("disp1").innerHTML = ""
+        }
+
+        function fun8(){
+            let nwPlanet2 = new planet("Uranus", "4497.1", "84.07 Earth years")
+            nwPlanet2.display()
+            document.getElementById("disp1").innerHTML = ""
+        }
+
+        
+       
+    </script>
+
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index2.css">
+
+    <style>
+        body{
+            background-color: #437C90;
+        }
+        
+        select{
+            background-color: #EEEBD3;
+            height: 29px;
+            border-radius: 29px;
+            border: 2px dotted #A98743;
+        }
+        select:hover{
+            background-color: #F7C548;
+            height: 29px;
+            border-radius: 29px;
+            border: 2px dotted blue;
+        }
+        .boxModl{
+            margin-left: 28%;
+            visibility: hidden;
+            padding: 38px
+        }
+
+    </style>
+   
+</head>
+<body>
+    <h1 style="text-align: center;">Our solar system</h1>
+
+    <div class="box">
+        <select class="center" name="planet" id="planet" >
+            <option value="Mercury">Mercury</option>
+            <option value="Venus">Venus</option>
+            <option value="Earth">Earth</option>
+            <option value="Mars">Mars</option>
+            <option value="Jupiter">Jupiter</option>
+            <option value="Saturn">Saturn</option>
+            <option value="Uranus">Uranus</option>
+            <option value="Neptune">Neptune</option>
+        </select>
+    </div>
+    
+<br><br>
+
+    <button class="center button button1" style="color: #C5D5EA;"onclick="display()">Show Details</button>
+    
+    
+    <div id="showArray" class="boxModl">
+        <br><br>
+        <p id="dsp"></p>
+        <p id="disp1"></p>
+        <p id="pdOfRev"></p>
+        <br><br>
+    </div>
+    
+</body>
+</html>

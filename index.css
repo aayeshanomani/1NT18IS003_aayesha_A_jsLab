@@ -151,9 +151,14 @@ audio{
 .button1 {
   background-color: #966B9D; 
   color: #C98686; 
-  border: 2px solid #F2B880;
+  border: 2px solid hsl(29, 81%, 73%);
+  border-radius: 28px;
+  margin-left: 25%;
 }
-
+.button1:hover{
+  background-color: #255957;
+  border-radius: 82px;
+}
 .button2 {
   background-color: #FFF4EC; 
   color: #E7CFBC; 
