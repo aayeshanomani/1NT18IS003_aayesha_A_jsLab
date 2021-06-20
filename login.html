@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <title>login</title>
+    <style>
+      button {
+        border: 0;
+        border-radius: 10px;
+        background-color: #3c16;
+        padding: 10px 20px;
+        text-transform: uppercase;
+        font-weight: 700;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Sign In</h1>
+    <label>NAME</label><br />
+    <input type="text" id="name" /><br />
+    <label>PASSWORD</label><br />
+    <input type="text" id="pd" /><br />
+    <p id="hello"></p>
+    <button onclick="myfunc()">Save</button>
+  </body>
+  <script>
+    var array = Array();
+    let cnt = 0;
+    function myfunc() {
+      let na = document.getElementById("name").value;
+      let pwd = document.getElementById("pd").value;
+      let per = new obj(na, pwd);
+
+      function obj(name, pwd) {
+        this.name = name;
+        this.pwd = pwd;
+      }
+      array.forEach(check);
+      function check(val) {
+        if (val != per.name) {
+          cnt++;
+        }
+      }
+      if (cnt == array.length) {
+        array.push(per);
+        document.getElementById("hello").innerHTML = "Added to the set";
+      } else
+        document.getElementById("hello").innerHTML = "Entry already present";
+    }
+  </script>
+</html>
