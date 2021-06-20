@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exception Handling</title>
+    <style>
+      body {
+        font-size: 2em;
+        text-align: center;
+      }
+      input {
+        padding: 15px;
+      }
+      button {
+        border: 0;
+        outline: 0;
+        padding: 10px 20px;
+        cursor: pointer;
+        text-transform: uppercase;
+        color: #fff;
+        background-color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Enter a number between 100 to 200:</p>
+    <input id="demo" type="text" />
+    <br />
+    <br />
+    <button type="button" onclick="myFunction()">Check</button>
+    <br />
+    <br />
+    <button type="button" onclick="myFunction2()">Built in error</button>
+    <p id="message"></p>
+    <script>
+      function myFunction() {
+        var message, x;
+        message = document.getElementById("message");
+        message.innerHTML = "";
+        x = document.getElementById("demo").value;
+        try {
+          if (x == "") throw "is empty";
+          if (isNaN(x)) throw "is not a number";
+          if (x > 200) throw "is too large";
+          if (x < 100) throw "is too small";
+          if (x >= 100 && x <= 200) {
+            message.innerHTML = "Valid number";
+          }
+        } catch (err) {
+          message.innerHTML = "Input " + err;
+        }
+      }
+      function myFunction2() {
+        try {
+          c = a + b;
+        } catch (err) {
+          alert(err);
+        }
+      }
+    </script>
+  </body>
+</html>
