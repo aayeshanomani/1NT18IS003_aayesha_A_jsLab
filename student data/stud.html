@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="index2.css">
+        <style>
+            .textinput{
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0px;
+                box-sizing: border-box;
+                border: 3px solid #FF99C9;
+                -webkit-transition: 0.5s;
+                transition: 0.5s;
+                outline: none;
+            }
+
+            .textinput:focus {
+                border: 3px solid #C1BDDB;
+            }
+
+            body{
+                background-color: #C1ABA6;
+            }
+
+        </style>
+
+        <script src="stud.js"></script>
+    </head>
+    <body >
+        <div class="boxModl">
+            <div id="allEnt">
+
+            </div>
+            <div class="center" id="form">
+                <input id="fname" class="textinput" type="text" required placeholder="First Name"><br>
+                <input id="lname" class="textinput" type="text" required placeholder="Last Name"><br>
+                <input type="text" id="usn" class="textinput" required placeholder="USN"><br>
+                <input type="number" id="age" placeholder="Age" required class="textinput"><br><br>
+                
+                <label for="Year">Year</label>
+                <div class="customSelect">
+                    <select id="year">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+                <br><br>
+                <h1 id="res"></h1>
+              
+                
+            </div>
+            <button class="button button1" id="subBut" onclick="submitData()">Submit</button>
+                <br>
+                <button class="button button2" id="disBut" value="Display all entries" onclick="displayEntries()">Display all entries</button>
+                <br>
+                <button class="button button2" id="movBut" style="visibility: hidden;" value="Move back to form" onclick="displayForm()">Move Back to form</button>
+                <br>
+            
+        </div>
+    </body>
+</html>
